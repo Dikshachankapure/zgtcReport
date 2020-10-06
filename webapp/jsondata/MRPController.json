@@ -1,0 +1,12 @@
+{
+  "MRPControllerData": [{
+  		"MRPControllerNo": "101",
+        "MRPControllerName": "MRP Controller 1"
+    },{
+  		"MRPControllerNo": "102",
+        "MRPControllerName": "MRP Controller 2"
+    },{
+  		"MRPControllerNo": "103",
+        "MRPControllerName": "MRP Controller 3"
+    }]
+}

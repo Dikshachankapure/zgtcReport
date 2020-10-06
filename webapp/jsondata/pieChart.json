@@ -1,0 +1,103 @@
+{
+  "MaterialCost": [{
+  		"Material": "Raw Material",
+        "Cost": "100132.00",
+        "Percentage": "0.014726338"
+    },{
+  		"Material": "In House Raw Material",
+        "Cost": "222490.00",
+        "Percentage": "0.032721437"
+    },{
+  		"Material": "Assembly Raw Material",
+        "Cost": "322490.00",
+        "Percentage": "0.047428362"
+    },{
+  		"Material": "Sub constructing",
+        "Cost": "422490.00",
+        "Percentage": "0.062135287"
+    },{
+  		"Material": "In House Labor(V)",
+        "Cost": "522490.00",
+        "Percentage": "0.076842211"
+    },{
+  		"Material": "Assembly Labor(V)",
+        "Cost": "622490.00",
+        "Percentage": "0.091549136"
+    },{
+  		"Material": "In House Expense(V)",
+        "Cost": "722490.00",
+        "Percentage": "0.106256061"
+    },{
+  		"Material": "Assembly Expense(V)",
+        "Cost": "822490.00",
+        "Percentage": "0.120962986"
+    },{
+  		"Material": "Subsidiary Material",
+        "Cost": "922490.00",
+        "Percentage": "0.135669911"
+    },{
+  		"Material": "Consumables",
+        "Cost": "022490.00",
+        "Percentage": "0.003307587"
+    },{
+  		"Material": "Packing Carriage",
+        "Cost": "113456.00",
+        "Percentage": "0.016685889"
+    },{
+  		"Material": "SG&A(Transportation)",
+        "Cost": "123456.00",
+        "Percentage": "0.018156581"
+    },{
+  		"Material": "Royalty",
+        "Cost": "133456.00",
+        "Percentage": "0.019627274"
+    },{
+  		"Material": "Commission",
+        "Cost": "143456.00",
+        "Percentage": "0.021097966"
+    },{
+  		"Material": "Trademark",
+        "Cost": "153456.00",
+        "Percentage": "0.022568659"
+    },{
+  		"Material": "Administration(Others)",
+        "Cost": "163456.00",
+        "Percentage": "0.024039351"
+    },{
+  		"Material": "In House Depreciation",
+        "Cost": "173456.00",
+        "Percentage": "0.025510044"
+    },{
+  		"Material": "Assembly Depreciation",
+        "Cost": "183456.00",
+        "Percentage": "0.026980736"
+    },{
+  		"Material": "Administration Depreciation",
+        "Cost": "109456.00",
+        "Percentage": "0.016097612"
+    },{
+  		"Material": "In House Labor(F)",
+        "Cost": "133456.00",
+        "Percentage": "0.019627274"
+    },{
+  		"Material": "Assembly Labor(F)",
+        "Cost": "144456.00",
+        "Percentage": "0.021245035"
+    },{
+  		"Material": "Administration(Labor)",
+        "Cost": "115490.00",
+        "Percentage": "0.016985027"
+    },{
+  		"Material": "In House Expense(F)",
+        "Cost": "125490.00",
+        "Percentage": "0.01845572"
+    },{
+  		"Material": "Assembly Expense(F)",
+        "Cost": "135490.00",
+        "Percentage": "0.019926412"
+    },{
+  		"Material": "SG&A(Others)",
+        "Cost": "145490.00",
+        "Percentage": "0.021397105"
+    }]
+}

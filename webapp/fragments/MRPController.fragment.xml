@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog noDataText="Not Found" title="Select MRP Controller" search="fnSearchMRPController" confirm="fnConfirmMRPController"
+		cancel="fnConfirmMRPController" items="{ path: '/MRPControllerData' }">
+		<StandardListItem title="{MRPControllerName}" description="{MRPControllerNo}" iconDensityAware="false" iconInset="false" type="Active"/>
+	</SelectDialog>
+</core:FragmentDefinition>

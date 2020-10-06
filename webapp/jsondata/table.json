@@ -1,0 +1,75 @@
+{
+	"ReportData": [{
+		"MaterialNo": "100132000",
+		"MaterialDesc": "BDCM KN0100",
+		"Hierarchy3Text": "DCT 100",
+		"Hierarchy2Text": "ABS",
+		"AprOP": "10000.00",
+		"MayOP": "20000.00",
+		"JunOP": "15000.00",
+		"JulyOP": "12000.00",
+		"AugOP": "13000.00",
+		"SepOP": "11000.00"
+
+	}, {
+		"MaterialNo": "100132004",
+		"MaterialDesc": "BDCM KN0200",
+		"Hierarchy3Text": "DCT 200",
+		"Hierarchy2Text": "DCT",
+		"AprOP": "205478.51",
+		"MayOP": "305478.51",
+		"JunOP": "405478.51",
+		"JulyOP": "505478.51",
+		"AugOP": "605478.51",
+		"SepOP": "705478.51"
+
+	}, {
+		"MaterialNo": "100132034",
+		"MaterialDesc": "BDCM KN0300",
+		"Hierarchy3Text": "DCT 300",
+		"Hierarchy2Text": "DCT 150",
+		"AprOP": "205478.51",
+		"MayOP": "305478.51",
+		"JunOP": "405478.51",
+		"JulyOP": "505478.51",
+		"AugOP": "605478.51",
+		"SepOP": "705478.51"
+
+	}, {
+
+		"MaterialNo": "100142000",
+		"MaterialDesc": "BDCM KN0400",
+		"Hierarchy3Text": "DCT 400",
+		"Hierarchy2Text": "DCT 250",
+		"AprOP": "305478.51",
+		"MayOP": "405478.51",
+		"JunOP": "505478.51",
+		"JulyOP": "605478.51",
+		"AugOP": "705478.51",
+		"SepOP": "805478.51"
+
+	}, {
+		"MaterialNo": "100152004",
+		"MaterialDesc": "BDCM KN0500",
+		"Hierarchy3Text": "DCT 500",
+		"Hierarchy2Text": "DCT 450",
+		"AprOP": "305478.51",
+		"MayOP": "405478.51",
+		"JunOP": "505478.51",
+		"JulyOP": "605478.51",
+		"AugOP": "705478.51",
+		"SepOP": "805478.51"
+
+	}, {
+		"MaterialNo": "100162034",
+		"MaterialDesc": "BDCM KN0600",
+		"Hierarchy3Text": "DCT 600",
+		"Hierarchy2Text": "DCT EOP",
+		"AprOP": "305478.51",
+		"MayOP": "405478.51",
+		"JunOP": "505478.51",
+		"JulyOP": "605478.51",
+		"AugOP": "705478.51",
+		"SepOP": "805478.51"
+	}]
+}

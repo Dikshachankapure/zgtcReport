@@ -1,0 +1,18 @@
+{
+  "MaterialData": [{
+  		"MaterialNo": "1000001",
+        "MaterialName": "Material 1"
+    },{
+  		"MaterialNo": "1000002",
+        "MaterialName": "Material 2"
+    },{
+  		"MaterialNo": "1000003",
+        "MaterialName": "Material 3"
+    },{
+  		"MaterialNo": "1000004",
+        "MaterialName": "Material 4"
+    },{
+  		"MaterialNo": "1000005",
+        "MaterialName": "Material 5"
+    }]
+}

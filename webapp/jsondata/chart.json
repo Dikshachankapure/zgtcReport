@@ -1,0 +1,85 @@
+{
+	"ChartByAmount": [{
+
+		"Hierarchy2Text": "ABS",
+		"ProductionAmount": "207550.19",
+		"Cost": "157001.68",
+		"Month": "Apr",
+		"OperatingProfit": "10000.00",
+		"AprOP": "10,000.00",
+		"MayOP": "20,000.00",
+		"JunOP": "15,000.00",
+		"JulyOP": "12,000.00",
+		"AugOP": "13,000.00",
+		"SepOP": "11,000.00"
+
+	}, {
+
+		"Hierarchy2Text": "DCT",
+		"ProductionAmount": "383784.75",
+		"Cost": "278068.71",
+		"Month": "May",
+		"OperatingProfit": "20000.00",
+		"AprOP": "205,478.51",
+		"MayOP": "305,478.51",
+		"JunOP": "405,478.51",
+		"JulyOP": "505,478.51",
+		"AugOP": "605,478.51",
+		"SepOP": "705,478.51"
+	}, {
+
+		"Hierarchy2Text": "DCT EOP",
+		"ProductionAmount": "411899.04",
+		"Cost": "185674.48",
+		"Month": "Jun",
+		"OperatingProfit": "15000.00",
+		"AprOP": "305,478.51",
+		"MayOP": "405,478.51",
+		"JunOP": "505,478.51",
+		"JulyOP": "605,478.51",
+		"AugOP": "705,478.51",
+		"SepOP": "805,478.51"
+	}, {
+
+		"Hierarchy2Text": "DCT 150",
+		"ProductionAmount": "183784.75",
+		"Cost": "278068.71",
+		"Month": "July",
+		"OperatingProfit": "12000.00",
+		"AprOP": "205,478.51",
+		"MayOP": "305,478.51",
+		"JunOP": "405,478.51",
+		"JulyOP": "505,478.51",
+		"AugOP": "605,478.51",
+		"SepOP": "705,478.51"
+	}, {
+
+		"Hierarchy2Text": "DCT 250",
+		"ProductionAmount": "311899.04",
+		"Cost": "165674.48",
+		"Month": "Aug",
+		"OperatingProfit": "13000.00",
+		"AprOP": "305,478.51",
+		"MayOP": "405,478.51",
+		"JunOP": "505,478.51",
+		"JulyOP": "605,478.51",
+		"AugOP": "705,478.51",
+		"SepOP": "805,478.51"
+
+	}, {
+
+		"Hierarchy2Text": "DCT 450",
+		"ProductionAmount": "111899.04",
+		"Cost": "122674.48",
+		"Month": "Sep",
+		"OperatingProfit": "11000.00",
+		"AprOP": "305,478.51",
+		"MayOP": "405,478.51",
+		"JunOP": "505,478.51",
+		"JulyOP": "605,478.51",
+		"AugOP": "705,478.51",
+		"SepOP": "805,478.51"
+
+	}]
+
+}

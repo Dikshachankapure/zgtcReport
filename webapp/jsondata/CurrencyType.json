@@ -1,0 +1,12 @@
+{
+  "CurrencyTypeData": [{
+  		"CurrencyCode": "INR",
+        "CurrencyName": "INR"
+    },{
+  		"CurrencyCode": "USD",
+        "CurrencyName": "USD"
+    },{
+  		"CurrencyCode": "JPY",
+        "CurrencyName": "JPY"
+    }]
+}

@@ -1,0 +1,178 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="poc.zgtcreport.controller.View4"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:layout="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:viz="sap.viz.ui5.controls"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data">
+	<App>
+		<pages>
+			<Page title="Page4">
+				<customHeader>
+					<Toolbar>
+						<Button type="Back" press="gotopage3"/>
+						<ToolbarSpacer/>
+						<Title text="{i18n>title}" level="H2"/>
+						<ToolbarSpacer/>
+					</Toolbar>
+				</customHeader>
+				<content>
+					<Panel id="panel2" expandable="true" expanded="true" headerText="Chart By Material" width="auto" class="sapUiResponsiveMargin">
+						<layout:FixFlex id='chartFixFlex' minFlexSize="350">
+							<layout:flexContent>
+								<Label text='Percentage' design="Bold" class='settingsLabel'></Label>
+								<viz:Popover id="idPopOver"></viz:Popover>
+								<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='80%' width="100%" vizType='pie'>
+									<viz:dataset>
+										<viz.data:FlattenedDataset data="{oModelPIEChart>/MaterialCost}">
+											<viz.data:dimensions>
+												<viz.data:DimensionDefinition name="Material" value="{oModelPIEChart>Material}"/>
+											</viz.data:dimensions>
+											<viz.data:measures>
+												<viz.data:MeasureDefinition id="measure" name="Cost" value="{oModelPIEChart>Percentage}"/>
+											</viz.data:measures>
+										</viz.data:FlattenedDataset>
+									</viz:dataset>
+									<viz:feeds>
+										<viz.feeds:FeedItem uid="size" type="Measure" values="Cost"/>
+										<viz.feeds:FeedItem uid="color" type="Dimension" values="Material"/>
+									</viz:feeds>
+								</viz:VizFrame>
+							</layout:flexContent>
+						</layout:FixFlex>
+					</Panel>
+					<IconTabBar id="idIconTabBar" select="handleIconTabBarSelect" class="sapUiResponsiveContentPadding">
+						<items>
+							<IconTabFilter text="Revenue Info" key="RevenueInfo">
+								<VBox class="sapUiSmallMargin">
+									<f:SimpleForm id="formproductionamount" editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" adjustLabelSpan="false"
+										emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1">
+										<f:content>
+											<Label text="Prodution Amount" class="labelbold"/>
+											<Text text="123,456.00"></Text>
+											<Label text="Activity Quantity" class="labelbold"/>
+											<Text text="223,456.00"></Text>
+											<Label text="Unit of Measure" class="labelbold"/>
+											<Text text="MIN"></Text>
+											<Label text="Production Quantity by Ship" class="labelbold"/>
+											<Text text="323,456.00"></Text>
+											<Label text="Sales Quantity" class="labelbold"/>
+											<Text text="423,456.00"></Text>
+										</f:content>
+									</f:SimpleForm>
+								</VBox>
+							</IconTabFilter>
+							<IconTabFilter text="Material Cost " key="MaterialCost">
+								<VBox class="sapUiSmallMargin">
+									<f:SimpleForm id="frmMaterialCost" editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" adjustLabelSpan="false"
+										emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1">
+										<f:content>
+											<Label text="Raw Material" class="labelbold"/>
+											<Text text="113,456.00"></Text>
+											<Label text="In House Raw Material" class="labelbold"/>
+											<Text text="123,456.00"></Text>
+											<Label text="Assembly Raw Material" class="labelbold"/>
+											<Text text="133,456.00"></Text>
+											<Label text="Sub-constructing" class="labelbold"/>
+											<Text text="143,456.00"></Text>
+										</f:content>
+									</f:SimpleForm>
+								</VBox>
+							</IconTabFilter>
+							<IconTabFilter text="Variable Expense" key="VariableExpense">
+								<VBox class="sapUiSmallMargin">
+									<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" adjustLabelSpan="false" emptySpanL="4"
+										emptySpanM="4" columnsL="1" columnsM="1">
+										<f:content>
+											<Label text="In House Labor (V)" class="labelbold"/>
+											<Text text="159,842.66"></Text>
+											<Label text="Assembly Labor (V)" class="labelbold"/>
+											<Text text="254,123.71"></Text>
+										</f:content>
+									</f:SimpleForm>
+								</VBox>
+							</IconTabFilter>
+							<IconTabFilter text="Depreciation" key="Depreciation">
+								<VBox class="sapUiSmallMargin">
+									<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanL="2" labelSpanM="2" adjustLabelSpan="false" emptySpanL="2"
+										emptySpanM="2" columnsL="2" columnsM="2">
+										<f:content>
+											<Label text="In House Expense (V)" class="labelbold"/>
+											<Text text="159,842.66"></Text>
+											<Label text="Assembly Expense (V)" class="labelbold"/>
+											<Text text="258,413.78"></Text>
+											<Label text="Subsidiary material" class="labelbold"/>
+											<Text text="158,141.77"></Text>
+											<Label text="Consumables" class="labelbold"/>
+											<Text text="258,421.76"></Text>
+											<Label text="Packing carriage" class="labelbold"/>
+											<Text text="158,413.75"></Text>
+											<Label text="SG and A(Transportation)" class="labelbold"/>
+											<Text text="258,414.74"></Text>
+											<Label text="Royalty" class="labelbold"/>
+											<Text text="258,413.73"></Text>
+											<Label text="Commission" class="labelbold"/>
+											<Text text="158,412.70"></Text>
+											<Label text="Trademark" class="labelbold"/>
+											<Text text="458,413.72"></Text>
+											<Label text="Administration (Others)" class="labelbold"/>
+											<Text text="258,441.71"></Text>
+										</f:content>
+									</f:SimpleForm>
+								</VBox>
+							</IconTabFilter>
+							<IconTabFilter text="Fixed Labor" key="FixedLabor">
+								<VBox class="sapUiSmallMargin">
+									<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" adjustLabelSpan="false" emptySpanL="4"
+										emptySpanM="4" columnsL="1" columnsM="1">
+										<f:content>
+											<Label text="In House Depreciation" class="labelbold"/>
+											<Text text="159,841.66"></Text>
+											<Label text="Assembly Depreciation" class="labelbold"/>
+											<Text text="358,413.71"></Text>
+											<Label text="Administration Depreciation" class="labelbold"/>
+											<Text text="258,412.71"></Text>
+										</f:content>
+									</f:SimpleForm>
+								</VBox>
+							</IconTabFilter>
+							<IconTabFilter text="Fixed Expences" key="FixedExpenses">
+								<VBox class="sapUiSmallMargin">
+									<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" adjustLabelSpan="false" emptySpanL="4"
+										emptySpanM="4" columnsL="1" columnsM="1">
+										<f:content>
+											<Label text="In House Labor (F)" class="labelbold"/>
+											<Text text="159,841.66"></Text>
+											<Label text="Assembly Labor (F)" class="labelbold"/>
+											<Text text="158,411.67"></Text>
+											<Label text="Administration(Labor)" class="labelbold"/>
+											<Text text="258,411.68"></Text>
+										</f:content>
+									</f:SimpleForm>
+								</VBox>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+					<!--	<Panel expandable="true" headerText="Revenue Information" width="auto" class="sapUiResponsiveMargin">
+							
+						</Panel>
+							<Panel expandable="true" headerText="Material Cost" width="auto" class="sapUiResponsiveMargin">
+							
+						</Panel>
+						<Panel expandable="true" headerText="Varialble Labor" width="auto" class="sapUiResponsiveMargin">
+							
+						</Panel>
+						<Panel expandable="true" headerText="Varialble Expense" width="auto" class="sapUiResponsiveMargin">
+							
+						</Panel>
+							<Panel expandable="true" headerText="Depriciation" width="auto" class="sapUiResponsiveMargin">
+							
+						</Panel>
+							<Panel expandable="true" headerText="Fixed Labor " width="auto" class="sapUiResponsiveMargin">
+							
+						</Panel>
+							<Panel expandable="true" headerText="Fixed Expense" width="auto" class="sapUiResponsiveMargin">
+							
+						</Panel>
+					-->
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

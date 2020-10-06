@@ -1,0 +1,86 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="poc.zgtcreport.controller.View2"
+	xmlns:html="http://www.w3.org/1999/xhtml" 	xmlns:layout="sap.ui.layout" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data">
+	<App>
+		<pages>
+			<Page title="Page2" showNavButton="true" navButtonPress="Gotopage1">
+				<content>
+					<Panel id="panel2" expandable="true" expanded="true" headerText="List of Hierarchy 3" width="auto" class="sapUiResponsiveMargin"
+							>
+							<Table id="tblMain" inset="false" items="{oModelCompany>/ReportData}">
+								<columns>
+									<Column>
+										<Text text="Hierarchy 3 Text"/>
+									</Column>
+									<Column demandPopin="true" minScreenWidth="Tablet">
+										<Text text="April OP"/>
+									</Column>
+									<Column demandPopin="true" minScreenWidth="Tablet">
+										<Text text="May OP"/>
+									</Column>
+									<Column demandPopin="true" minScreenWidth="Tablet">
+										<Text text="June OP"/>
+									</Column>
+									<Column demandPopin="true" minScreenWidth="Tablet">
+										<Text text="July OP"/>
+									</Column>
+									<Column demandPopin="true" minScreenWidth="Tablet">
+										<Text text="Aug OP"/>
+									</Column>
+									<Column demandPopin="true" minScreenWidth="Tablet">
+										<Text text="Sep OP"/>
+									</Column>
+									<Column>
+										<Text text="Chart"/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Link text="{oModelCompany>Hierarchy3Text}" press="onPressHierarchy2Text"/>
+											<Text text="{oModelCompany>AprOP}"/>
+											<Text text="{oModelCompany>MayOP}"/>
+											<Text text="{oModelCompany>JunOP}"/>
+											<Text text="{oModelCompany>JulyOP}"/>
+											<Text text="{oModelCompany>AugOP}"/>
+											<Text text="{oModelCompany>SepOP}"/>
+											<Button id="btngraph" type="Default" icon="sap-icon://line-chart" press="onDisplayGraph"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</Panel>
+						<Panel id="panel3" expandable="true" expanded="true" headerText="Chart of Hierarchy 3" width="auto" class="sapUiResponsiveMargin"
+						visible="false">
+								<layout:FixFlex id="chartFixFlex" minFlexSize="500">
+								<layout:flexContent>
+									<viz:Popover id="idPopOver"/>
+									<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height="100%" width="100%" vizType="line">
+										<viz:dataset>
+											<viz.data:FlattenedDataset data="{oModelChart>/ChartByAmount}">
+												<viz.data:dimensions>
+													<viz.data:DimensionDefinition name="Month" value="{oModelChart>Month}"/>
+												</viz.data:dimensions>
+												<viz.data:measures>
+													<viz.data:MeasureDefinition name="ProductionAmount" value="{oModelChart>ProductionAmount}"/>
+													<viz.data:MeasureDefinition name="Cost" value="{oModelChart>Cost}"/>
+													<viz.data:MeasureDefinition name="OperatingProfit" value="{oModelChart>OperatingProfit}"/>
+												</viz.data:measures>
+											</viz.data:FlattenedDataset>
+										</viz:dataset>
+										<viz:feeds>
+											<viz.feeds:FeedItem id='valueAxisFeed1' uid="valueAxis" type="Measure" values="ProductionAmount"/>
+											<viz.feeds:FeedItem id='valueAxisFeed2' uid="valueAxis" type="Measure" values="Cost"/>
+											<viz.feeds:FeedItem id='valueAxisFeed3' uid="valueAxis" type="Measure" values="OperatingProfit"/>
+											<viz.feeds:FeedItem id="categoryAxisFeed" uid="categoryAxis" type="Dimension" values="Month"/>
+										</viz:feeds>
+									</viz:VizFrame>
+								</layout:flexContent>
+							</layout:FixFlex>
+						</Panel>
+					
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

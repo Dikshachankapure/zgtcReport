@@ -1,0 +1,168 @@
+<mvc:View controllerName="poc.zgtcreport.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:layout="sap.ui.layout" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data" xmlns:core="sap.ui.core">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="Custom Analytical Report">
+					<content>
+						<Panel id="panel1" expandable="true" expanded="true" headerText="Search Criteria" width="auto" class="sapUiResponsiveMargin">
+							<layout:Grid defaultSpan="XL3 L3 M3 S12">
+								<layout:VerticalLayout>
+									<Label text="Company" required="true"/>
+									<Input id="txtCompany" type="Text" textFormatMode="Key" placeholder="Select Company" showValueHelp="true"
+										valueHelpRequest="fnCompanySearchHelp" showSuggestion="true" valueHelpOnly="true" valueStateText="Select Company"
+										suggestionItems="{/CompanyData}">
+										<suggestionItems>
+											<core:ListItem key="{CompanyCode}" text="{CompanyName}"/>
+										</suggestionItems>
+									</Input>
+								</layout:VerticalLayout>
+								<layout:VerticalLayout>
+									<Label text="Fiscal Year" required="true"/>
+									<Select id="drpFiscalYear" width="220px" selectedKey="0">
+										<items>
+											<core:Item key="0" text="Select"/>
+											<core:Item key="2015" text="2015"/>
+											<core:Item key="2016" text="2016"/>
+											<core:Item key="2017" text="2017"/>
+											<core:Item key="2018" text="2018"/>
+											<core:Item key="2019" text="2019"/>
+											<core:Item key="2020" text="2020"/>
+											<core:Item key="2021" text="2021"/>
+											<core:Item key="2022" text="2022"/>
+											<core:Item key="2023" text="2023"/>
+											<core:Item key="2024" text="2024"/>
+											<core:Item key="2025" text="2025"/>
+										</items>
+									</Select>
+								</layout:VerticalLayout>
+								<layout:VerticalLayout>
+									<Label text="Period (From):" required="true"/>
+									<DatePicker id="dpkPeriodFrom" placeholder="YYYY/MM/DD" class="sapUiSmallMarginBottom" valueFormat="yyyy/MM/dd" displayFormat="yyyy/MM/dd"
+										valueStateText="Enter Period From"/>
+								</layout:VerticalLayout>
+								<layout:VerticalLayout>
+									<Label text="Period (To)" required="true"/>
+									<DatePicker id="dpPeriodTo" placeholder="YYYY/MM/DD" class="sapUiSmallMarginBottom" valueFormat="yyyy/MM/dd" displayFormat="yyyy/MM/dd"
+										valueStateText="Enter Period To"/>
+								</layout:VerticalLayout>
+								<layout:VerticalLayout>
+									<Label text="Material"/>
+									<Input id="txtMaterial" type="Text" textFormatMode="Key" placeholder="Select Material" showValueHelp="true"
+										valueHelpRequest="fnMaterialSearchHelp" showSuggestion="true" valueHelpOnly="true" valueStateText="Select Material"
+										suggestionItems="{/MaterialData}">
+										<suggestionItems>
+											<core:ListItem key="{MaterialNo}" text="{MaterialName}"/>
+										</suggestionItems>
+									</Input>
+								</layout:VerticalLayout>
+								<layout:VerticalLayout>
+									<Label text="MRP Controller"/>
+									<Input id="txtMRPController" type="Text" textFormatMode="Key" placeholder="Select MRP Controller" showValueHelp="true"
+										valueHelpRequest="fnMRPControllerSearchHelp" showSuggestion="true" valueHelpOnly="true" valueStateText="Select MRP Controller"
+										suggestionItems="{/MRPControllerData}">
+										<suggestionItems>
+											<core:ListItem key="{MRPControllerNo}" text="{MRPControllerName}"/>
+										</suggestionItems>
+									</Input>
+								</layout:VerticalLayout>
+								<layout:VerticalLayout>
+									<Label text="Currency Type" required="true"/>
+									<Input id="txtCurrencyType" type="Text" textFormatMode="Key" placeholder="Select Currency" showValueHelp="true"
+										valueHelpRequest="fnCurrencySearchHelp" showSuggestion="true" valueHelpOnly="true" valueStateText="Select Currency"
+										suggestionItems="{/CurrencyData}">
+										<suggestionItems>
+											<core:ListItem key="{CurrencyCode}" text="{CurrencyName}"/>
+										</suggestionItems>
+									</Input>
+								</layout:VerticalLayout>
+								<layout:VerticalLayout>
+									<Label text="Version"/>
+									<Input id="txtVersion" placeholder="Enter Version" width="220px"/>
+								</layout:VerticalLayout>
+								<layout:VerticalLayout>
+									<Label text=""/>
+									<Button type="Emphasized" width="220px" icon="sap-icon://search" press="onSearch" text="Search"/>
+								</layout:VerticalLayout>
+							</layout:Grid>
+						</Panel>
+						<Panel id="panel2" expandable="true" expanded="true" headerText="List of Hierarchy 2" width="auto" class="sapUiResponsiveMargin"
+							visible="false">
+							<Table id="tblMain" inset="false" items="{oModelCompany>/ReportData}">
+								<columns>
+									<Column>
+										<Text text="Hierarchy 2 Text"/>
+									</Column>
+									<Column demandPopin="true" minScreenWidth="Tablet">
+										<Text text="April OP"/>
+									</Column>
+									<Column demandPopin="true" minScreenWidth="Tablet">
+										<Text text="May OP"/>
+									</Column>
+									<Column demandPopin="true" minScreenWidth="Tablet">
+										<Text text="June OP"/>
+									</Column>
+									<Column demandPopin="true" minScreenWidth="Tablet">
+										<Text text="July OP"/>
+									</Column>
+									<Column demandPopin="true" minScreenWidth="Tablet">
+										<Text text="Aug OP"/>
+									</Column>
+									<Column demandPopin="true" minScreenWidth="Tablet">
+										<Text text="Sep OP"/>
+									</Column>
+									<Column>
+										<Text text="Chart"/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Link text="{oModelCompany>Hierarchy2Text}" press="onPressHierarchy2Text"/>
+											<Text text="{oModelCompany>AprOP}"/>
+											<Text text="{oModelCompany>MayOP}"/>
+											<Text text="{oModelCompany>JunOP}"/>
+											<Text text="{oModelCompany>JulyOP}"/>
+											<Text text="{oModelCompany>AugOP}"/>
+											<Text text="{oModelCompany>SepOP}"/>
+											<Button id="btngraph" type="Default" icon="sap-icon://line-chart" press="onDisplayGraph"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</Panel>
+						<Panel id="panel3" expandable="true" expanded="true" headerText="Chart of Hierarchy 2 " width="auto" class="sapUiResponsiveMargin"
+						visible="false">
+								<layout:FixFlex id="chartFixFlex" minFlexSize="500">
+								<layout:flexContent>
+									<viz:Popover id="idPopOver"/>
+									<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height="100%" width="100%" vizType="line">
+										<viz:dataset>
+											<viz.data:FlattenedDataset data="{oModelChart>/ChartByAmount}">
+												<viz.data:dimensions>
+													<viz.data:DimensionDefinition name="Month" value="{oModelChart>Month}"/>
+												</viz.data:dimensions>
+												<viz.data:measures>
+													<viz.data:MeasureDefinition name="ProductionAmount" value="{oModelChart>ProductionAmount}"/>
+													<viz.data:MeasureDefinition name="Cost" value="{oModelChart>Cost}"/>
+													<viz.data:MeasureDefinition name="OperatingProfit" value="{oModelChart>OperatingProfit}"/>
+												</viz.data:measures>
+											</viz.data:FlattenedDataset>
+										</viz:dataset>
+										<viz:feeds>
+											<viz.feeds:FeedItem id='valueAxisFeed1' uid="valueAxis" type="Measure" values="ProductionAmount"/>
+											<viz.feeds:FeedItem id='valueAxisFeed2' uid="valueAxis" type="Measure" values="Cost"/>
+											<viz.feeds:FeedItem id='valueAxisFeed3' uid="valueAxis" type="Measure" values="OperatingProfit"/>
+											<viz.feeds:FeedItem id="categoryAxisFeed" uid="categoryAxis" type="Dimension" values="Month"/>
+										</viz:feeds>
+									</viz:VizFrame>
+								</layout:flexContent>
+							</layout:FixFlex>
+						</Panel>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

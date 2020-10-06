@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog noDataText="Not Found" title="Select Currency Type" search="fnSearchCurrencyType" confirm="fnConfirmCurrencyType"
+		cancel="fnConfirmCurrencyType" items="{ path: '/CurrencyTypeData' }">
+		<StandardListItem title="{CurrencyCode}" description="{CurrencyName}" iconDensityAware="false" iconInset="false" type="Active"/>
+	</SelectDialog>
+</core:FragmentDefinition>

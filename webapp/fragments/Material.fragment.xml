@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog noDataText="Not Found" title="Select Material" search="fnSearchMaterial" confirm="fnConfirmMaterial"
+		cancel="fnConfirmMaterial" items="{ path: '/MaterialData' }">
+		<StandardListItem title="{MaterialName}" description="{MaterialNo}" iconDensityAware="false" iconInset="false" type="Active"/>
+	</SelectDialog>
+</core:FragmentDefinition>
